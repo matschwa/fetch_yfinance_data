@@ -14,8 +14,12 @@ aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
 aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 aws_region = os.getenv("AWS_REGION", "us-east-1")
 s3_bucket = os.getenv("S3_BUCKET_NAME")
-file_path = "test.txt"  # File to upload
-s3_key = "test.txt"  # S3 object name
+
+# Debug print
+print(f"AWS_ACCESS_KEY_ID: {aws_access_key}")
+print(f"AWS_SECRET_ACCESS_KEY: {'SET' if aws_secret_key else 'NOT SET'}")  # Don't print actual secret
+print(f"AWS_REGION: {aws_region}")
+
 
 #%%
 s3 = boto3.client(
