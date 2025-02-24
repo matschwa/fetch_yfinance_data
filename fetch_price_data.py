@@ -18,7 +18,7 @@ from ratelimit import limits, sleep_and_retry
 
 #%%
 ONE_MINUTE = 60
-MAX_CALLS_PER_MINUTE = 200  # Adjust if needed
+MAX_CALLS_PER_MINUTE = 120  # Adjust if needed
 
 @sleep_and_retry
 @limits(calls=MAX_CALLS_PER_MINUTE, period=ONE_MINUTE)
