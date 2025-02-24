@@ -16,6 +16,7 @@ with open("gettex_filtered_tickers.txt", "r") as f:
     
 SYMBOLS = tkrs_all
 
+
 #%% Define functions
 
 def fetch_all_basis_data(ticker):
@@ -62,7 +63,7 @@ def main():
     basis_data_all = {}
 
     # Fetch financial data for each symbol
-    for symbol in tqdm(SYMBOLS[:5], desc="Processing tickers"):
+    for symbol in tqdm(SYMBOLS, desc="Processing tickers"):
 
         # Create a yfinance Ticker object
         ticker = yf.Ticker(symbol)
@@ -83,6 +84,10 @@ def main():
 
 #%% Run the main function
 if __name__ == "__main__":
+    # Create downloads folder if it doesn't exist
+    if not os.path.exists("downloads"):
+        os.path.mkdir("downloads")
+        
     main()
 
 # %%

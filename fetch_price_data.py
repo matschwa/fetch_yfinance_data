@@ -47,6 +47,10 @@ def main():
 
 #%%
 if __name__ == "__main__":
+    # Create downloads folder if it doesn't exist
+    if not os.path.exists("downloads"):
+        os.path.mkdir("downloads")
+
     main()
 
 # %%
