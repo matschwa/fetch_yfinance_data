@@ -1,0 +1,6 @@
+yfinance
+ratelimit
+tqdm
+pandas
+boto3
+dotenv
