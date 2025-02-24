@@ -41,6 +41,7 @@ def upload_to_s3(folder_dir, s3_bucket):
         # Upload file
         try:
             file_path = os.path.join(folder_dir, ifile)
+            s3_key = file_path
             s3.upload_file(file_path, s3_bucket, file_path)
             print(f"File uploaded to s3://{s3_bucket}/{s3_key}")
         except Exception as e:
