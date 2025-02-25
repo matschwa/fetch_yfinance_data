@@ -27,7 +27,7 @@ def fetch_all_basis_data(ticker):
             "balance_sheet": fetch_data(ticker, "balance_sheet"),
             "cash_flow": fetch_data(ticker, "cash_flow"),
             "info":fetch_data(ticker, "info"),
-            "basis_data":fetch_data(ticker, "basis_data")
+            "financials":fetch_data(ticker, "financials")
         }
     except Exception as e:
         print(f"Error fetching basis_data for {ticker}: {e}")
