@@ -11,3 +11,4 @@ python3.12.exe -m venv .venv
 
 pip install -r .\requirements.txt
 
+
