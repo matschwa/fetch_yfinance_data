@@ -23,7 +23,7 @@ MAX_CALLS_PER_MINUTE = 120  # Adjust if needed
 @sleep_and_retry
 @limits(calls=MAX_CALLS_PER_MINUTE, period=ONE_MINUTE)
 def get_ticker_data(ticker):
-    data = yf.download(ticker,  period="2y", interval="1d", multi_level_index=False, 
+    data = yf.download(ticker,  period="1y", interval="1d", multi_level_index=False, 
                        threads=False, progress=False)
     return data
 
