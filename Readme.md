@@ -10,5 +10,3 @@ python3.12.exe -m venv .venv
 .venv\Scripts\activate
 
 pip install -r .\requirements.txt
-
-
